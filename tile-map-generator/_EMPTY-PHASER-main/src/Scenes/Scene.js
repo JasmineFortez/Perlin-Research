@@ -31,12 +31,12 @@ class sceneName extends Phaser.Scene {
             this.generateMap();  // Regenerate the map with the new seed
         });
 
-        this.input.keyboard.on('keydown-Q', () => {
-            this.noiseSampleSize = Math.max(1, this.noiseSampleSize - 1);  // Shrink the noise sample window
-            this.generateMap();  // Regenerate the map with the new size
-        });
+        this.input.keyboard.on('keydown-DOWN', () => {
+            this.noiseSampleSize = Math.max(1, this.noiseSampleSize - 1);
+            this.generateMap();
+          });
 
-        this.input.keyboard.on('keydown-E', () => {
+        this.input.keyboard.on('keydown-UP', () => {
             this.noiseSampleSize += 1;  // Expand the noise sample window
             this.generateMap();  // Regenerate the map with the new size
         });
