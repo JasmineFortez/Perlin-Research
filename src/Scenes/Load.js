@@ -9,7 +9,7 @@ class Load extends Phaser.Scene {
 
     preload() {
         // loading a Tiled tilesheet with tile map
-        this.load.setPath("./assets/");                                 // relative path to your assets folder
+        this.load.setPath("./assets");                                 // relative path to your assets folder
         this.load.image("terrain-tiles", "mapPack_tilesheet.png");      // Tiled tilesheet  --> (YOUR_KEY_A, IMAGE_NAME)
         this.load.tilemapTiledJSON("map", "terrain map.json");          // Tiled JSON       --> (YOUR_KEY_B, FILE_NAME) 
         // NOTE: the keys you define above will be how you access this preloaded content in your scene(s)
